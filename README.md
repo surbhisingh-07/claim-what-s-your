@@ -1,75 +1,30 @@
-# React + TypeScript + Vite
+# Claim What’s Yours
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A mobile-friendly prototype that helps students in Karnataka explore possible education-support schemes, understand sample eligibility rules, prepare documents, and keep personal application notes.
 
-Currently, two official plugins are available:
+## Run locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```sh
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Create a production build with `npm run build`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Prototype features
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Conversational profile starter with a small on-device text parser and editable profile details
+- Explainable rule matching with matched and missing information shown separately
+- Scheme details, document checklist, generic application guidance, and in-app reminder labels
+- Application tracker and local demo scheme management
+- Browser-local profile, checklist, reminder, and tracker state
 
-```
+## Important limitations
+
+- This is a frontend-only prototype. It has no backend, database, account system, real AI integration, or official application submission.
+- Scheme records and deadlines are illustrative sample data, not verified government benefits. No official URLs or verification dates are claimed.
+- The admin screen is not authenticated or secure. Changes are saved only in the current browser.
+- Do not enter Aadhaar, PAN, bank account details, OTPs, passwords, or other sensitive identifiers.
+- Check current eligibility, documents, deadlines, and application links with an official government source before acting.
+
+The project is configured as a Render Static Site through `render.yaml`.
